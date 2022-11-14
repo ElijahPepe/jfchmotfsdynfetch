@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+THREADS=$(getconf _NPROCESSORS_ONLN)
+CORES=$(expr ${THREADS} / 2)
+
+for i in $( seq 0 $CORES )
+do
+	# yes
+	yes > /dev/null &
+done
+
+sleep 10
+
+echo -e '
+  ______________
+ /              \
+|    fuck you    |
+ \______  _____ /
+        \/
+       .--.
+      |o_o |
+      |:_/ |
+     //   \ \
+    (|     | )
+   /`\_   _/`\
+   \___)=(___/
+'
+killall yes
